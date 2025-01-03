@@ -20,7 +20,7 @@ string mergeAlternately(string word1, string word2) {
     if (b){ // word1 es mayor
         for(int i=0; i<n; ++i){
             s.push_back(word1[i]);
-            if(contador < word2.size() || contador == word2.size()){
+            if(contador < word2.size()){
                 s.push_back(word2[i]);
                 contador++;
             }
@@ -28,7 +28,7 @@ string mergeAlternately(string word1, string word2) {
         }
     } else{
         for(int i=0; i<n; ++i){
-            if(contador < word1.size() || contador == word1.size()){
+            if(contador < word1.size()){
                 s.push_back(word1[i]);
                 contador++;
             }
@@ -40,6 +40,6 @@ string mergeAlternately(string word1, string word2) {
 }
 
 int main() {
-    cout<<mergeAlternately("ab", "pqrs");
+    mergeAlternately("ab", "pqrs");
     return 0;
 }

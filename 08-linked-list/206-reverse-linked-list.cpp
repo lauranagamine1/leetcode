@@ -1,9 +1,7 @@
 //
 // Created by laura on 5/02/2025.
 //
-//
-// Created by laura on 16/01/2025.
-//
+
 #include <bits/stdc++.h>
 using namespace std;
 struct ListNode {
@@ -15,21 +13,7 @@ struct ListNode {
 };
 
 ListNode* reverseList(ListNode* head) {
-    if(head == nullptr){
-        return nullptr;
-    }
-    if (head->next == nullptr){
-        return head;
-    }
 
-    auto current = head;
-    ListNode* l;
-
-
-
-
-
-    return l;
 }
 
 void printList(ListNode* head){

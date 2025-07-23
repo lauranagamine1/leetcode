@@ -20,5 +20,5 @@ string gcdOfStrings(string str1, string str2) {
 }
 
 int main(){
-    gcdOfStrings("ABABAB","ABAB");
+    cout<<gcdOfStrings("ABABAB","ABAB");
 }

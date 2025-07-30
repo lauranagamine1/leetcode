@@ -8,16 +8,28 @@ string reverseWords(string s) {
     vector<string> v;
     string c;
     // como un split de python
-    for(int i=0; i<s.size();++i){
-        if(s[i] != ' '){
+    int i=0;
+    while(i<s.size()){
+        while(s[i] != ' '){
+            if(i == s.size()){
+                break;
+            }
             c += s[i];
-        }else{
-            cout<<c<<endl;
+            ++i;
+        }
+        if(!c.empty()){
+            cout<<i<<":"<<c<<endl;
             v.push_back(c);
             c.erase();
         }
+        if(i == s.size()) break;
+
+        while(s[i] == ' '){
+            ++i;
+        }
+
     }
-    cout<<endl;
+
     string str;
     // iteramos en orden inverso
     for(auto it = v.end()-1; it != v.begin(); --it){
@@ -25,9 +37,13 @@ string reverseWords(string s) {
         str+=" ";
     }
     str+= *v.begin();
-    cout<<str;
+    cout<<"->"<<str;
     return str;
 }
+
 int main() {
-    reverseWords("the sky is blue");
+    cout<<endl;
+    string s1 = "   hello  world  ";
+    string s2 = "the sky is blue";
+    reverseWords(s1);
 }

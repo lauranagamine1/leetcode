@@ -1,3 +1,5 @@
+// BASIC
+// CTRL + J => live templates
 #include <bits/stdc++.h>
 using namespace std;
 
